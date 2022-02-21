@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>Recyclables</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="ENTER DESCRIPTION HERE">
+	<meta name="author" content="Ann Thompson">
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+  <script  src="recyclables.js" defer></script>
+</head> 
+
+
+<body>
+<!-- BODY GOES HERE -->
+  <div class="logo">
+    <a href="index.html">
+    <img src="logo.png" alt="Logo" width="100" height="100">
+    </a>
+  </div> <!-- END logo -->
+
+  <div class="header">
+      <ul>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="recyclables.html">Local Recycling</a></li>
+        <li><a href="othercities.html">Other Cities</a></li>
+        <li class="dropdown"><a href="advocacy.html" class="dropbtn">Advocacy</a>
+          <div class="dropdown-content">
+          <a href="advocacy-global.html">Global</a>
+          <a href="advocacy-economic.html">Economic</a>
+          <a href="advocacy-local.php">Local + Submissions</a>
+          </div>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+  </div> <!-- END header -->
+  <div class="innerContent">
+
+  <br>
+  <h1 class="pageTitle">Local Recycling Guide</h1>
+    <p class="leftAlignP"> In Austin, curbside recycling collection services are available for residential buildings with four or less units. Recycling is collected every other week in blue bins, and any surplus recycling is also permitted. Austin Recycling accepts most paper, plastic containers, hard plastics, cardboard, metals, and glass. <!--Search or check below to make sure your materials are recyclable:<input type="text" placeholder="Search..">--></p>
+
+
+
+    <div style="clear:both">
+      <form action=>
+      <input type="text" id="matSearch" placeholder="Search.." name="search">
+      <button type="button" onclick="searchMaterials(document.getElementById('matSearch').value)"> Submit</button>
+      </form>
+    </div>
+
+<br>
+
+  <button type="button" id = "showButton" onclick="loadDoc()" style="text-align:center;">Show All Recyclables</button>
+      <div id="results"></div>
+      <div id="demo"><br></div>
+        
+      <!-- <script>
+      
+      </script> -->
+
+      <!-- <br>
+      <table id = 'table1' >
+        <tr>
+          <td>
+            <table id = "table2">
+              <tr>
+                <td rowspan='2' ><img src="logo.png" alt="Logo" width="50" height="50"></td>
+                <th colspan = '8'> Plastic 5: PP (Polypropylene) </th>
+              </tr>
+              <tr>
+                <td colspan= '8'> Sometimes Recyclable </td>
+              </tr>
+              <tr>
+                <td colspan = '10' rowspan='8'>Polypropylene is used to make plastic containers for food products like yogurt, margarine, and whipped topping. However, it can also be used to make non-recyclable textiles. Check the bottom of your container to make sure it is recycable, and make sure to rinse any excess food products from the container </td>
+              </tr>
+
+            </table>
+          </td>
+          <td>
+            <table id = "table2">
+              <tr>
+                <td rowspan='2' ><img src="logo.png" alt="Logo" width="50" height="50"></td>
+                <th colspan = '8'> Newsprint </th>
+              </tr>
+              <tr>
+                <td colspan= '8'> Recyclable </td>
+              </tr>
+              <tr>
+                <td colspan = '10' rowspan='8'>Newsprint is a heavily produced product, and luckily it is highly recyclable! In fact, recycling all daily newspapers in Austin would provide enough material to replace 2/3 of an acre of forest. Be sure to always recycle your newsprint instead of putting it in a landfill. </td>
+              </tr>
+
+            </table>
+          </td>
+          <td>
+            <table id = "table2">
+              <tr>
+                <td rowspan='2' ><img src="logo.png" alt="Logo" width="50" height="50"></td>
+                <th colspan = '8'> Aluminum </th>
+              </tr>
+              <tr>
+                <td colspan= '8'> Recyclable </td>
+              </tr>
+              <tr>
+                <td colspan = '10' rowspan='8'>Like most metals, Aluminium is recyclable. It is commonly used in cans, and even aluminum alloys are recyclable. If it looks like metal, it's probably recyclable.</td>
+              </tr>
+
+            </table>
+          </td>
+        </tr>
+
+                <tr>
+          <td>
+            <table id = "table2">
+              <tr>
+                <td rowspan='2' ><img src="logo.png" alt="Logo" width="50" height="50"></td>
+                <th colspan = '8'> Plastic 3: PVC (Polyvinyl chloride) </th>
+              </tr>
+              <tr>
+                <td colspan= '8'> NOT Recyclable </td>
+              </tr>
+              <tr>
+                <td colspan = '10' rowspan='8'>PVC is best known in pipe form, but it is also used in children's toys, tray, and in furniture. Unfortunately, it cannot be recycled. </td>
+              </tr>
+
+            </table>
+          </td>
+          <td>
+            <table id = "table2">
+              <tr>
+                <td rowspan='2' ><img src="logo.png" alt="Logo" width="50" height="50"></td>
+                <th colspan = '8'> Corrugated Materials </th>
+              </tr>
+              <tr>
+                <td colspan= '8'> Recyclable </td>
+              </tr>
+              <tr>
+                <td colspan = '10' rowspan='8'>Corrugated materials, like cardboard boxes, are paper-based and very recyclable. In fact, the corrogated center of most of these materials are already 100% recycled. They are the most recycled paper product, and should never be thrown away unless they are soiled or otherwise contaminated. </td>
+              </tr>
+
+            </table>
+          </td>
+          <td>
+            <table id = "table2">
+              <tr>
+                <td rowspan='2' ><img src="logo.png" alt="Logo" width="50" height="50"></td>
+                <th colspan = '8'> Plastic 1: PETE (Polyethylene terephthalate) </th>
+              </tr>
+              <tr>
+                <td colspan= '8'> Recyclable </td>
+              </tr>
+              <tr>
+                <td colspan = '10' rowspan='8'>PETE is commonly used in one time use water bottles, beverage cups, and cooking oil containers. It is often very thin plastic that can be easily bent. PETE is usually indicated on the bottom of these containers with the number 1. Be sure to clean this material before recycling. </td>
+              </tr>
+
+            </table>
+          </td>
+        </tr>
+
+                <tr>
+          <td>
+            <table id = "table2">
+              <tr>
+                <td rowspan='2' ><img src="logo.png" alt="Logo" width="50" height="50"></td>
+                <th colspan = '8'> Ceramic </th>
+              </tr>
+              <tr>
+                <td colspan= '8'> NOT Recyclable </td>
+              </tr>
+              <tr>
+                <td colspan = '10' rowspan='8'>Ceramic materials are made from fired clay, which involves a chemical reaction that cannot be reversed, so it cannot be recycled. Bowls, mugs, and decorative items are often made out of ceramic materials. Instead of disposing of functional pieces, check out the <a href=https://theaustincommon.com/austin-reuse-directory/get-rid-of/> Austin Reuse Directory</a></td>
+              </tr>
+
+            </table>
+          </td>
+          <td>
+            <table id = "table2">
+              <tr>
+                <td rowspan='2' ><img src="logo.png" alt="Logo" width="50" height="50"></td>
+                <th colspan = '8'> Brass </th>
+              </tr>
+              <tr>
+                <td colspan= '8'> Recyclable </td>
+              </tr>
+              <tr>
+                <td colspan = '10' rowspan='8'>Like most metals, brass and brass alloys are recyclable. Make sure that the metals are clean before recycling. </td>
+              </tr>
+
+            </table>
+          </td>
+          <td>
+            <table id = "table2">
+              <tr>
+                <td rowspan='2' ><img src="logo.png" alt="Logo" width="50" height="50"></td>
+                <th colspan = '8'> High Grade Paper </th>
+              </tr>
+              <tr>
+                <td colspan= '8'> Recyclable </td>
+              </tr>
+              <tr>
+                <td colspan = '10' rowspan='8'>High grade paper, like paper used for letters and printers are recyclable. Every ton of high grade office paper that is recycled can save 24 trees.</td>
+              </tr>
+
+            </table>
+          </td>
+        </tr>
+
+                <tr>
+          <td>
+            <table id = "table2">
+              <tr>
+                <td rowspan='2' ><img src="logo.png" alt="Logo" width="50" height="50"></td>
+                <th colspan = '8'> Plastic 2: HDPE (High density polyethylene) </th>
+              </tr>
+              <tr>
+                <td colspan= '8'> Recyclable </td>
+              </tr>
+              <tr>
+                <td colspan = '10' rowspan='8'>These plastics are very common and very recyclable. Products made from HDPE include, milk jugs, beauty product containers, and cleaning product containers. Check the bottom of your plastics to see what plastic it is. Only recycle clean products. </td>
+              </tr>
+
+            </table>
+          </td>
+          <td>
+            <table id = "table2">
+              <tr>
+                <td rowspan='2' ><img src="logo.png" alt="Logo" width="50" height="50"></td>
+                <th colspan = '8'>Plastic 4: LDPE (Low density polyethylene)</th>
+              </tr>
+              <tr>
+                <td colspan= '8'> Sometimes Recyclable </td>
+              </tr>
+              <tr>
+                <td colspan = '10' rowspan='8'>This plastic wrapping and plastic bags are made of LDPE. Usually, this product isn't recyclable. Unless you have explicitely recyclable LDPE, avoid putting your recycling in plastic trash bags. This can really disrupt the recycling process.</td>
+              </tr>
+
+            </table>
+          </td>
+          <td>
+            <table id = "table2">
+              <tr>
+                <td rowspan='2' ><img src="logo.png" alt="Logo" width="50" height="50"></td>
+                <th colspan = '8'> Glossy Paper </th>
+              </tr>
+              <tr>
+                <td colspan= '8'> Recyclable </td>
+              </tr>
+              <tr>
+                <td colspan = '10' rowspan='8'>Glossy paper, which is used for mail and handouts, is recyclable.</td>
+              </tr>
+
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table id = "table2">
+              <tr>
+                <td rowspan='2' ><img src="logo.png" alt="Logo" width="50" height="50"></td>
+                <th colspan = '8'> Plastic 6: PS (Polystyrene) </th>
+              </tr>
+              <tr>
+                <td colspan= '8'> Sometimes Recyclable </td>
+              </tr>
+              <tr>
+                <td colspan = '10' rowspan='8'>PS is better known as styrofoam. Styrofoam products are used for cooler, coffee cups, and packing peanuts. Before recycling styrofoam, make sure that it is labeled as recyclable. If not, it should be disposed of in the trash.</td>
+              </tr>
+
+            </table>
+          </td>
+          <td>
+            <table id = "table2">
+              <tr>
+                <td rowspan='2' ><img src="logo.png" alt="Logo" width="50" height="50"></td>
+                <th colspan = '8'> Food Waste </th>
+              </tr>
+              <tr>
+                <td colspan= '8'> NOT Recyclable </td>
+              </tr>
+              <tr>
+                <td colspan = '10' rowspan='8'>Food waste is often recycled when people do not clean their containers. Make sure that everything you recycle is clean. To cut down on on landfill volume, you can compost your food waste in green bins!</td>
+              </tr>
+
+            </table>
+          </td>
+          <td>
+            <table id = "table2">
+              <tr>
+                <td rowspan='2' ><img src="logo.png" alt="Logo" width="50" height="50"></td>
+                <th colspan = '8'> Cast Iron </th>
+              </tr>
+              <tr>
+                <td colspan= '8'> Recyclable </td>
+              </tr>
+              <tr>
+                <td colspan = '10' rowspan='8'>Like most metals, you can recycle cast iron. Many pans and pots are made out of cast iron, so when they are no longer usable, you can recycle them! </td>
+              </tr>
+
+            </table>
+          </td>
+        </tr>
+
+
+
+
+
+
+      </table>
+      <br>  -->
+        
+
+      <p class="leftAlignP"> Questions? Visit the <a href='https://www.austintexas.gov/department/residential-recycling-collection'>Austin Recycling Site</a>, or <a href=./contact.html>Contact us</a>.</p>
+      
+      </div>
+
+</body>
+</html>

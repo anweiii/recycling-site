@@ -1,0 +1,16 @@
+//  { "name":"", "recyclableStatus":"","desc":"", "searchTerms":["","",""]}
+
+
+{"recyclables":[
+
+  { "name":"", "recyclableStatus":"NOT Recyclable","desc":", "searchTerms":[]},
+
+  { "name":"Brass", "recyclableStatus":"Recyclable","desc":"Like most metals, brass and brass alloys are recyclable. Make sure that the metals are clean before recycling.", "searchTerms":["brass","metal"]},
+
+  { "name":"High Grade Paper", "recyclableStatus":"Recyclable","desc":"High grade paper, like paper used for letters and printers are recyclable. Every ton of high grade office paper that is recycled can save 24 trees.", "searchTerms":["high grade paper","heavy paper","quality paper","paper","paper products"]},
+
+  { "name":"Plastic 2: HDPE (High density polyethylene)", "recyclableStatus":"Recyclable","desc":"These plastics are very common and very recyclable. Products made from HDPE include, milk jugs, beauty product containers, and cleaning product containers. Check the bottom of your plastics to see what plastic it is. Only recycle clean products.", "searchTerms":["plastic 2","hdpe","plastic number 2","plastic"]},
+
+  { "name":"", "recyclableStatus":"","desc":"", "searchTerms":["","",""]},
+
+]}
